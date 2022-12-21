@@ -1,0 +1,37 @@
+.task-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header div:first-child {
+  color: var(--blue-400);
+  font-weight: 700;
+}
+
+.header div:last-child {
+  color: var(--purple-400);
+  font-weight: 700;
+}
+
+.header div span:last-child {
+  border-radius: 999px;
+  background-color: var(--gray-400);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-100);
+  padding: 0.125rem 0.5rem
+}
