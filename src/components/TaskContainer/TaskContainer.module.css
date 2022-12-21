@@ -35,3 +35,9 @@
   color: var(--gray-100);
   padding: 0.125rem 0.5rem
 }
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

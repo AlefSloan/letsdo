@@ -1,3 +1,4 @@
+import { Task } from '../Task/Task';
 import style from './TaskContainer.module.css';
 
 export function TaskContainer() {
@@ -13,8 +14,10 @@ export function TaskContainer() {
           <span>2 de 5</span>
         </div>
       </div>
-      <div>
-        <p>Tasks</p>
+      <div className={style["task-content"]}>
+        {[1, 2, 3, 4, 5].map(() => (
+          <Task />
+        ))}
       </div>
     </div>
   );
