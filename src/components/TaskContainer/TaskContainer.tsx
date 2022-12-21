@@ -40,6 +40,12 @@ export function TaskContainer() {
     setTasksContainer([...filteredTask, newStatusTask]);
   }
 
+  const handleTaskDelete = (id: string) => {
+    const filteredTask = tasksContainer.filter((task) => !(task.id === id));
+
+    setTasksContainer([...filteredTask]);
+  }
+
   const completedTaskReducer = tasksContainer.filter((task) => task.status === true);
 
   return (
@@ -67,6 +73,7 @@ export function TaskContainer() {
               content={task.content}
               status={task.status}
               hasChanged={handleTaskStatusChange}
+              hasDeleted={handleTaskDelete}
             />
           ))}
       </div>

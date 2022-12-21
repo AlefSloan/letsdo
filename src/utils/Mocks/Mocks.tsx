@@ -3,12 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 export const TaskMock = [
   {
     id: uuidv4(),
-    content: 'Dê uma estrelinha no repositório',
+    content: 'Dar uma estrelinha no repositório',
     status: false,
   },
   {
     id: uuidv4(),
-    content: 'Dê um follow no linkedIn',
+    content: 'Dar um follow no linkedIn',
     status: false,
   },
   {
