@@ -4,13 +4,16 @@ export const TaskMock = [
   {
     id: uuidv4(),
     content: 'Dê uma estrelinha no repositório',
+    status: false,
   },
   {
     id: uuidv4(),
     content: 'Dê um follow no linkedIn',
+    status: false,
   },
   {
     id: uuidv4(),
-    content: 'Me pague um café',
+    content: 'Ser uma pessoa muito linda',
+    status: true,
   },
 ];
