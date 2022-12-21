@@ -7,9 +7,10 @@ interface TaskProps {
   content: string;
   status: boolean;
   hasChanged: (task: MockUpInterface) => void;
+  hasDeleted: (id: string) => void;
 }
 
-export function Task({ id, content, status, hasChanged }: TaskProps) {
+export function Task({ id, content, status, hasChanged, hasDeleted }: TaskProps) {
   return (
     <div className={style.task}>
       <div className={style.content}>
@@ -21,7 +22,7 @@ export function Task({ id, content, status, hasChanged }: TaskProps) {
         </label>
       </div>
       
-      <Trash size={20} color="#808080" />
+      <Trash size={20} color="#808080" onClick={() => hasDeleted(id)} />
     </div>
   );
 }

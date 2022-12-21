@@ -8,6 +8,7 @@ interface TaskBarProps {
 
 export function TaskBar({ handleCreate }: TaskBarProps) {
   const [task, setTask] = useState('');
+  const isDisabled = task.length <= 0 ? true : false;
   
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTask(event?.target.value);
@@ -19,9 +20,15 @@ export function TaskBar({ handleCreate }: TaskBarProps) {
   }
 
   return (
-    <div className={style["search-bar"]}>
-      <input placeholder="Adicione uma nova tarefa" value={task} onChange={handleInputChange}/>
-      <button onClick={handleButtonClick}>Criar <PlusCircle size={20} color="#FFFFFF" /></button>
+    <div className={style['task-bar']}>
+      <input
+        placeholder="Adicione uma nova tarefa"
+        value={task}
+        onChange={handleInputChange}
+      />
+      <button disabled={isDisabled} onClick={handleButtonClick}>
+        Criar <PlusCircle size={20} color="#FFFFFF" />
+      </button>
     </div>
-  )
+  );
 }
