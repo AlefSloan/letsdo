@@ -6,6 +6,7 @@ import { Task } from '../Task/Task';
 import { TaskMock } from '../../utils/Mocks/Mocks';
 
 import style from './TaskContainer.module.css';
+import { EmptyTask } from '../EmptyTask/EmptyTask';
 
 export interface MockUpInterface {
   id: string;
@@ -63,20 +64,26 @@ export function TaskContainer() {
         </div>
       </div>
 
-      <div className={style['task-content']}>
-        {tasksContainer
-          .sort((a, b) => statusOrder.indexOf(b.status) - statusOrder.indexOf(a.status))
-          .map((task) => (
-            <Task
-              key={task.id}
-              id={task.id}
-              content={task.content}
-              status={task.status}
-              hasChanged={handleTaskStatusChange}
-              hasDeleted={handleTaskDelete}
-            />
-          ))}
-      </div>
+      {tasksContainer.length === 0 ? <EmptyTask /> : 
+        <div className={style['task-content']}>
+          {tasksContainer
+            .sort((a, b) => statusOrder.indexOf(b.status) - statusOrder.indexOf(a.status))
+            .map((task) => (
+              <Task
+                key={task.id}
+                id={task.id}
+                content={task.content}
+                status={task.status}
+                hasChanged={handleTaskStatusChange}
+                hasDeleted={handleTaskDelete}
+              />
+            ))}
+        </div>
+      }
+      
+      
+      
+      
     </div>
   );
 }

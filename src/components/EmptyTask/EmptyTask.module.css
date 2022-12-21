@@ -1,0 +1,20 @@
+.empty-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 5rem;
+}
+
+.empty-task div p:first-child {
+  font-weight: 700;
+}
+
+.empty-task div p {
+  color: var(--gray-300)
+}
