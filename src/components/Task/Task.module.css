@@ -25,7 +25,7 @@ label > input[type="checkbox"]:checked + *::before {
   border-color: var(--purple-400);
 }
 label > input[type="checkbox"]:checked + * {
-  color: var(--gray-400);
+  color: var(--gray-300);
   text-decoration: line-through;
 }
 
