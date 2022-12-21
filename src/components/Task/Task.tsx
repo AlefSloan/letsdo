@@ -1,17 +1,20 @@
 import style from './Task.module.css';
 import { Trash } from 'phosphor-react';
+import { MockUpInterface } from '../TaskContainer/TaskContainer';
 
 interface TaskProps {
-  key: string;
+  id: string;
   content: string;
+  status: boolean;
+  hasChanged: (task: MockUpInterface) => void;
 }
 
-export function Task({ content }: TaskProps) {
+export function Task({ id, content, status, hasChanged }: TaskProps) {
   return (
     <div className={style.task}>
       <div className={style.content}>
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" checked={status} onChange={() => hasChanged({id, content, status})}/>
           <span className={style["checkbox-text"]}>
             { content }
           </span>
