@@ -2,6 +2,7 @@ import { Header } from "./components/Header/Header";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 
 import style from './App.module.css';
+import { TaskContainer } from "./components/TaskContainer/TaskContainer";
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <Header />
       <div className={style.wrapper}>
         <SearchBar />
+        <TaskContainer />
       </div>
     </div>
   )
