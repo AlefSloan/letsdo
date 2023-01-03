@@ -54,8 +54,3 @@ Start server
 ```bash
   npm run dev
 ```
-
-
-## Screenshots
-
-![App Screenshot](https://uploaddeimagens.com.br/imagens/vKZJ5QQ "LetsDo Project")
