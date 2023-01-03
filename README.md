@@ -58,4 +58,4 @@ Start server
 
 ## Screenshots
 
-![App Screenshot](./src/assets/Screen1.png "LetsDo Project")
+![App Screenshot](https://uploaddeimagens.com.br/imagens/vKZJ5QQ "LetsDo Project")
